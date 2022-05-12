@@ -1,0 +1,21 @@
+def __circle_move1__(A,N):
+    '''Сдвигает элементы массива влево
+    возвращает '''
+    tmp = A[0]
+    for i in range(N-1):
+        A[i] = A[i+1]
+    A[N-1] = tmp
+    print(A)
+def __circle_move2__(A,N):
+    '''Сдвигает элементы массива влево
+    возвращает '''
+    tmp = A[N-1]
+    for i in range(N-2,-1,-1):
+        A[i+1] = A[i]
+    A[0] = tmp
+    print(A)
+A = [int(i) for i in input().split()]
+N = A.index(A[-1]) + 1
+print(A,N)
+__circle_move1__(A,N)
+__circle_move2__(A,N)
